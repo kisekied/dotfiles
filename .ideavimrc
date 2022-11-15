@@ -1,0 +1,39 @@
+" Config --------------------------------------
+set number relativenumber
+set showmode
+set clipboard=unnamedplus
+
+" Plugins -------------------------------------
+set NERDTree
+set surround
+set easymotion
+
+" Keymaps -------------------------------------
+let mapleader = " "
+
+""" Insert line break
+nnoremap <leader>l i<CR><Esc>
+
+""" Move text up and down
+nnoremap <A-j> <Esc>:m .+1<CR>
+nnoremap <A-k> <Esc>:m .-2<CR>
+
+""" Navigate buffers
+nnoremap <S-l> :bnext<CR>
+nnoremap <S-h> :bprevious<CR>
+
+"" === Visual mode ===
+""" Stay in indent mode
+vnoremap < <gv
+vnoremap > >gv
+
+"" === Plugins Keymaps ===
+
+""" - NERDTree -
+nnoremap <leader>e :NERDTree<CR>
+
+""" - Easymotion -
+map <leader>f <Plug>(easymotion-bd-f)
+map <leader>L <Plug>(easymotion-bd-jk)
+map <leader>w <Plug>(easymotion-bd-w)
+
